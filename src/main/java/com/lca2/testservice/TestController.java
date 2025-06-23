@@ -16,7 +16,7 @@ public class TestController {
         String userId = GatewayRequestHeaderUtils.getUserId();
 
         if (userId == null) {
-            return ResponseEntity.internalServerError().build();
+            return ResponseEntity.ok("null");
         }
         return ResponseEntity.ok(userId);
     }
